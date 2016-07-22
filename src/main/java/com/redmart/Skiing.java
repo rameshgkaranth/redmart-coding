@@ -94,6 +94,9 @@ public class Skiing {
 			int diff1 = path1[path1.length - 1] - path1[0];
 			int diff2 = path2[path2.length - 1] - path2[0];
 			
+			if (diff1 == diff2) {
+				return ((path1[path1.length - 1] < path2[path2.length - 1]) ? path1 : path2);
+			}
 			return (diff1 > diff2 ? path1 : path2);
 		}
 		
